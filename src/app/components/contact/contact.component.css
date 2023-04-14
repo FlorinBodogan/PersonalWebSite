@@ -1,0 +1,131 @@
+.contact-section{
+    padding: 9.6rem 0 9.6rem 0;
+    background-color: #121212;
+}
+
+.container{
+    height: fit-content;
+    width: fit-content;
+    animation: fadeIn 3s;
+}
+
+.contact{
+    border-radius: 11px;
+    background-color: #121212;
+    max-height: auto;
+    width: 50vw;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.form{
+    text-align: center;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    height: fit-content;
+}
+
+.contact .heading-secondary{
+    color: #e93131;
+    margin-bottom: 8vh;
+}
+
+.contact-text{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 4.8rem;
+}
+
+.contact-form label{
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    color: #d5d5d5;
+}
+
+.contact-form input, .calculator-form select{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #c3c2c2;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input::placeholder{
+    color: #6b6b6b;
+}
+
+.contact *:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.8rem #e93131;
+}
+
+.message{
+    height: 20vh;
+}
+
+.btn--form{
+    background-color: #121212;
+    color: #d5d5d5;
+    border: 2px solid #d5d5d5;
+    border-radius: 30px;
+    align-self: center;
+    padding: 1.4rem;
+    transition: all 0.5s;
+    font-size: 2.1rem;
+    cursor: pointer;
+}
+
+.btn--form:hover, .btn--form:active{
+    background-color: #e93131;
+    color: #d5d5d5;
+    border: 2px solid #e93131;
+}
+
+/* -------------------------------------------------------------- */
+
+.footer-container{
+    padding: 3.6rem 0 3.6rem 0;
+    background-color: #202020;
+}
+
+.footer-flex-list{
+    display: flex;
+    justify-content: center;
+    gap: 4.8rem;
+}
+
+.footer-flex-list{
+    list-style: none;
+    display: flex;
+}
+
+.footer-link:link, .footer-link:visited{
+    text-decoration: none;
+    font-size: 3.2rem;
+    color: #d5d5d5;
+    transition: all 0.3s;
+}
+
+.footer-link:hover, .footer-link:active{
+    color: #e93131;
+}

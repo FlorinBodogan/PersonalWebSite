@@ -1,0 +1,36 @@
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact">
+                <div class="contact-text-box">
+                    <h2 class="heading-secondary form">Contact</h2>
+                </div>
+                <form class="contact-form grid-form" action="https://formsubmit.co/wishshadow03@gmail.com" method="POST">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" name="name" placeholder="Johnny" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Johnny@yahoo.com" required>
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <input id="message" type="text" name="message" class="message" placeholder="The message" required>
+                    </div>             
+                    <button class="btn--form" type="submit">Send Email</button>
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-flex-list">
+                <li><a class="footer-link" href="https://github.com/FlorinBodogan"><fa-icon [icon]="faGithub"></fa-icon></a></li>
+                <li><a class="footer-link" href="https://www.facebook.com/florin.constantinescu.585"><fa-icon [icon]="faFacebook"></fa-icon></a></li>
+                <li><a class="footer-link" href="https://www.linkedin.com/in/florin-bodogan-67636520b/"><fa-icon [icon]="faLinkedin"></fa-icon></a></li>
+            </ul>
+        </div>
+    </footer>
+    </body>

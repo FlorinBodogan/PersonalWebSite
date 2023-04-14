@@ -1,0 +1,243 @@
+.home{
+    height: 90vh;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.home-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999;
+    width: 100w;
+}
+
+.hero-section{
+    z-index: -1;
+}
+
+.hero-text-box{
+    color: #eee;
+    z-index: 9999;
+}
+
+.name{
+    color: #e93131;
+    z-index: 9999;
+}
+
+.heading-primary--hero{
+    font-size: 6.4rem;
+    color: #e6e3e3;
+    display: flex;
+    gap: 1rem;
+    z-index: 9999;
+    animation: fadeFromTop 1.2s;
+}
+
+@keyframes fadeFromTop{
+    from{
+        opacity: 0;
+        transform: translate(0, -600px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.hero-text{
+    font-size: 2.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 4.8rem;
+    z-index: 9999;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.btn--home{
+    color: #fff;
+    border-radius: 30px;
+    align-self: end;
+    display: inline-block;
+    padding: 2.4rem 4.8rem;
+    transition: all 0.5s;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 9999;
+    animation: fadeFromBottom 1.2s;
+}
+
+@keyframes fadeFromBottom{
+    from {
+        opacity: 0;
+        transform: translate(0, 600px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn--home:hover, .btn--home:active{
+    background-color: #e93131;
+    color: #eee;
+}
+
+/***********************************************************************************/
+/* ------------------ MEDIA QUERIES ---------------------------------------------- */
+/***********************************************************************************/
+
+/******************************/
+/* ----- Smaller Than 936px ---- */
+/******************************/
+
+@media(max-width:58.5em){
+    .heading-primary--hero{
+        font-size: 4.8rem;
+    }
+
+    .btn--home{
+        font-size: 1.6rem;
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 708px ---- */
+/******************************/
+
+@media(max-width:45em){
+    .heading-primary--hero{
+        font-size: 3.6rem;
+    }
+
+    .hero-text{
+        font-size: 2rem;
+    }
+
+    .btn--home{
+        font-size: 1.2rem;
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 526px ---- */
+/******************************/
+
+@media(max-width:33em){
+    .heading-primary--hero{
+        font-size: 3.2rem;
+    }
+
+    .hero-text{
+        font-size: 1.8rem;
+    }
+
+    .btn--home{
+        font-size: 1.1rem;
+        padding: 1.6rem 3.2rem;
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 465px ---- */
+/******************************/
+
+@media(max-width:29.25em){
+    .home-container{
+        position: absolute;
+        left: 46%;
+        top: 50%;
+        transform: translate(-42%, -50%);
+    }
+}
+/******************************/
+/* ----- Smaller Than 432px ---- */
+/******************************/
+
+@media(max-width:27em){
+    .home-container{
+        position: absolute;
+        left: 43%;
+        top: 50%;
+        transform: translate(-38%, -50%);
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 404px ---- */
+/******************************/
+
+@media(max-width:25.5em){
+    .home-container{
+        position: absolute;
+        left: 36%;
+        top: 50%;
+        transform: translate(-26%, -50%);
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 364px ---- */
+/******************************/
+
+@media(max-width:22.75em){
+    .home-container{
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        transform: translate(-22%, -50%);
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 332px ---- */
+/******************************/
+
+@media(max-width:20.75em){
+    .home-container{
+        position: absolute;
+        left: 24%;
+        top: 50%;
+        transform: translate(-12%, -50%);
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 306px ---- */
+/******************************/
+
+@media(max-width:19.125em){
+    .home-container{
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translate(7%, -50%);
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 282px ---- */
+/******************************/
+
+@media(max-width:17.25em){
+    .home-container{
+        position: absolute;
+        left: -3%;
+        top: 50%;
+        transform: translate(10%, -50%);
+    }
+}

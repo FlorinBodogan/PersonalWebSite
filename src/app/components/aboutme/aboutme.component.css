@@ -1,0 +1,327 @@
+.aboutme{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    z-index: 9999;
+}
+
+.description-section {
+    position: relative;
+    font-size: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+.myPhoto{
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+    animation: fadeInFromLeft 2.5s ease-in-out;
+}
+
+@keyframes fadeInFromLeft{
+  from{
+      opacity: 0;
+      transform: translate(-600px);
+  }
+  to {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+.img-user{
+    height: 25rem;
+    width: 25rem;
+}
+
+.description-text{
+    color: #ffffffdf;
+    font-size: 2.4rem;
+    width: 40vw;
+    padding-bottom: 10vh;
+    animation: fadeInFromRight 2.5s ease-in-out;
+}
+
+@keyframes fadeInFromRight{
+  from{
+      opacity: 0;
+      transform: translate(600px);
+  }
+  to {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+.skills-section{
+    position: relative;
+    padding-top: 2vh;
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 2.4rem;
+    place-items: center;
+    justify-content: center;
+}
+
+.img-skill{
+    height: 6rem;
+    width: 10rem;
+}
+
+.first-colon, .second-colon{
+    display: flex;
+    gap: 20vh;
+}
+
+.first-colon{
+    animation: fadeIn 3s ease-in-out;
+}
+
+.second-colon{
+  animation: fadeIn 6s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.card {
+    width: 150px;
+    height: 100px;
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background: #050516;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(#e93131, #020460);
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 2000ms infinite;
+    animation-play-state: paused;
+}
+
+.card:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+.card, .card::after {
+    box-sizing: border-box;
+}
+
+.card:active {
+    --border-width: 5px;
+}
+
+/***********************************************************************************/
+/* ------------------ MEDIA QUERIES ---------------------------------------------- */
+/***********************************************************************************/
+
+/******************************/
+/* -------- Laptops --------- */
+/******************************/
+
+@media(max-width: 97em){
+    .img-user{
+        height: 18rem;
+        width: 18rem;
+    }
+
+    .description-section{
+        gap: 2vh;
+    }
+
+    .description-text{
+        font-size: 2rem;
+    }
+
+    .skills-section{
+        padding-top: 0;
+    }
+}
+
+/******************************/
+/* ---- Smaller Desktops ---- */
+/******************************/
+
+@media(max-width:84em){
+    .aboutme{
+        height: 90vh;
+    } 
+
+    .img-user{
+        height: 16rem;
+        width: 16rem;
+    }
+
+    .description-text{
+        font-size: 1.6rem;
+    }
+
+    .skills-section{
+        width: 50vw;
+    }
+}
+
+/******************************/
+/* ----- Bigger Tablets ----- */
+/******************************/
+
+@media(max-width:75em){
+    .aboutme{
+        height: 90vh;
+    } 
+
+    .first-colon, .second-colon{
+        gap: 5vw;
+    }
+}
+
+/******************************/
+/* ----- Middle Tablets ----- */
+/******************************/
+
+@media(max-width:63em){
+    .aboutme{
+        height: 90vh;
+    } 
+
+    .skills-section{
+        width: 35vw;
+    }
+
+    .first-colon, .second-colon{
+        gap: 4vw;
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img-skill{
+        width: 8rem;
+    }
+}
+
+/******************************/
+/* ----- Smaller Tablets ---- */
+/******************************/
+
+@media(max-width:43em){
+    .aboutme{
+        height: 90vh;
+    } 
+
+    .skills-section{
+        width: 25vw;
+    }
+
+    .card {
+        width: 80px;
+        height: 100px;
+    }
+
+    .img-skill{
+        width: 6rem;
+    }
+
+    .description-text{
+        width: 60vw;
+    }
+}
+
+/******************************/
+/* --------- Phones --------- */
+/******************************/
+
+@media(max-width: 34em){
+    .aboutme{
+        height: 210vh;
+    } 
+
+    .description-text{
+        width: 75vw;
+    }
+
+    .skills-section{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 2.4rem;
+        gap: 3vh;
+        place-items: center;
+        justify-content: center;
+    }
+
+    .first-colon, .second-colon{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 160px;
+        height: 120px;
+    }
+
+    .img-skill{
+        width: 10rem;
+    }
+}

@@ -1,0 +1,16 @@
+<body>
+    <div class="home">
+        <section class="hero-section">
+            <ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+            <div class="home-container">
+                <div class="hero-text-box">
+                    <h1 class="heading-primary heading-primary--hero">Hello, I'm <div class="name">Florin</div></h1>
+                    <p class="hero-text">
+                        Web Developer
+                    </p>
+                    <a  routerLink="/about" class="btn btn--home">About Me</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
