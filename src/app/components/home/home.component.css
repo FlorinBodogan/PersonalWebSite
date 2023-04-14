@@ -1,5 +1,5 @@
 .home{
-    height: 90vh;
+    height: fit-content;
     width: fit-content;
     overflow: hidden;
 }

@@ -1,5 +1,5 @@
 .aboutme{
-    height: 90vh;
+    height: fit-content;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -203,7 +203,7 @@
 
 @media(max-width:84em){
     .aboutme{
-        height: 90vh;
+        height: fit-content;
     } 
 
     .img-user{
@@ -226,7 +226,7 @@
 
 @media(max-width:75em){
     .aboutme{
-        height: 90vh;
+        height: fit-content;
     } 
 
     .first-colon, .second-colon{
@@ -240,7 +240,7 @@
 
 @media(max-width:63em){
     .aboutme{
-        height: 90vh;
+        height: fit-content;
     } 
 
     .skills-section{
@@ -267,7 +267,7 @@
 
 @media(max-width:43em){
     .aboutme{
-        height: 90vh;
+        height: fit-content;
     } 
 
     .skills-section{
@@ -294,7 +294,7 @@
 
 @media(max-width: 34em){
     .aboutme{
-        height: 210vh;
+        height: fit-content;
     } 
 
     .description-text{

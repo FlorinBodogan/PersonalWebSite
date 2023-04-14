@@ -1,5 +1,5 @@
 .project-container{
-    height: 90vh;
+    height: fit-content;
     background-color: #121212;
     z-index: 9999;
 }
