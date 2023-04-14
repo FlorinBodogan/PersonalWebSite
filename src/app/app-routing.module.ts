@@ -8,11 +8,11 @@ import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '/header', component: HeaderComponent },
-  { path: '/home', component: HomeComponent },
-  { path: '/about', component: AboutmeComponent },
-  { path: '/projects', component: ProjectsComponent },
-  { path: '/contact', component: ContactComponent },
+  { path: 'header', component: HeaderComponent, pathMatch: 'full'},
+  { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'about', component: AboutmeComponent, pathMatch: 'full' },
+  { path: 'projects', component: ProjectsComponent, pathMatch: 'full' },
+  { path: 'contact', component: ContactComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
