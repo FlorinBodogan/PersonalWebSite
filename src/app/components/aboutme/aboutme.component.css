@@ -1,8 +1,7 @@
 .aboutme{
-    height: fit-content;
+    height: 90vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
     background-color: #121212;
     z-index: 9999;
     padding-bottom: 10vh;
@@ -17,6 +16,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 20vh;
     z-index: 9999;
 }
 
@@ -46,7 +46,6 @@
     color: #ffffffdf;
     font-size: 2.4rem;
     width: 40vw;
-    padding-bottom: 10vh;
     animation: fadeInFromRight 2.5s ease-in-out;
 }
 
@@ -63,11 +62,11 @@
 
 .skills-section{
     position: relative;
-    padding-top: 2vh;
+    padding-top: 10vh;
     width: 60vw;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
     font-size: 2.4rem;
     place-items: center;
     justify-content: center;
@@ -75,19 +74,31 @@
 
 .img-skill{
     height: 6rem;
-    width: 10rem;
+    width: auto;
 }
 
-.first-colon, .second-colon{
+.first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
     display: flex;
     gap: 20vh;
 }
 
 .first-colon{
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .second-colon{
+  animation: fadeIn 3s ease-in-out;
+}
+
+.third-colon{
+  animation: fadeIn 4s ease-in-out;
+}
+
+.fourth-colon{
+  animation: fadeIn 5s ease-in-out;
+}
+
+.fifth-colon{
   animation: fadeIn 6s ease-in-out;
 }
 
@@ -180,21 +191,12 @@
 /******************************/
 
 @media(max-width: 97em){
-    .img-user{
-        height: 18rem;
-        width: 18rem;
-    }
-
     .description-section{
         gap: 2vh;
     }
 
     .description-text{
         font-size: 2rem;
-    }
-
-    .skills-section{
-        padding-top: 0;
     }
 }
 
@@ -204,21 +206,28 @@
 
 @media(max-width:84em){
     .aboutme{
+        display: flex;
+        flex-direction: column;
         height: fit-content;
     } 
 
+    .description-section {
+        padding-bottom: 0;
+    }
+
     .img-user{
         height: 16rem;
-        width: 16rem;
     }
 
     .description-text{
+        width: 60vw;
         font-size: 1.6rem;
     }
 
     .skills-section{
         width: 50vw;
     }
+
 }
 
 /******************************/
@@ -230,7 +239,7 @@
         height: fit-content;
     } 
 
-    .first-colon, .second-colon{
+    .first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
         gap: 5vw;
     }
 }
@@ -248,17 +257,8 @@
         width: 35vw;
     }
 
-    .first-colon, .second-colon{
+    .first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
         gap: 4vw;
-    }
-
-    .card {
-        width: 100px;
-        height: 100px;
-    }
-
-    .img-skill{
-        width: 8rem;
     }
 }
 
@@ -273,15 +273,6 @@
 
     .skills-section{
         width: 25vw;
-    }
-
-    .card {
-        width: 80px;
-        height: 100px;
-    }
-
-    .img-skill{
-        width: 6rem;
     }
 
     .description-text{
@@ -312,17 +303,8 @@
         justify-content: center;
     }
 
-    .first-colon, .second-colon{
+    .first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
         display: flex;
         flex-direction: column;
-    }
-
-    .card {
-        width: 160px;
-        height: 120px;
-    }
-
-    .img-skill{
-        width: 10rem;
     }
 }
