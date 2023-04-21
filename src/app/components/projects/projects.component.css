@@ -75,7 +75,7 @@
 }
 
 .description{
-    padding: 0 1rem 1rem 1rem;
+    padding: 1rem;
     font-size: 2rem;
     font-weight: 500;
     color: #fff;
@@ -238,13 +238,6 @@
         width: 75vw;
     }
 
-}
-
-/******************************/
-/* ----- Smaller Than 410px ---- */
-/******************************/
-
-@media(max-width:25.625em){
     .title{
         font-size: 2.3rem;
     }
@@ -256,6 +249,7 @@
     .description-alt{
         font-size: 1.3rem;
     }
+
 }
 
 /******************************/
