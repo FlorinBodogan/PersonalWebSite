@@ -1,23 +1,87 @@
 .project-container{
-    height: fit-content;
+    padding-top: 15vh;
+    padding-bottom: 25vh;
     background-color: #121212;
     z-index: 9999;
 }
 
-.grid--center-v{
-    margin-bottom: 10vh;
-}
-
 .project-section{
-    padding: 9.6rem 0;
+    margin: 0 2vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 3vw;
 }
 
-.text-project-box{
+.project-box{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
-    animation: fadeIn 4s;
+    justify-content: center;
+    animation: fadeIn 1s;
+}
+
+.project-box:hover .img-project{
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.project-box:hover .description{
+    display: none;
+}
+
+.project-box:hover .title{
+    display: none;
+}
+
+.project-box:hover .description{
+    animation: fadeInFromBottom 1.5s;
+    display: block;
+}
+
+.project-box-img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.project-box-info{
+    height: 15vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+    background-color: rgba(136,136,136,.07);
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.img-project{
+    height: 55vh;
+    width: 30vw;
+    transition: all 1s;
+}
+
+.title{
+    padding: 1rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: red;
+    animation: fadeInFromTop 1.5s;
+}
+
+.description{
+    padding: 0 1rem 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    display: none;
+    animation: fadeInFromBottom 1.5s;
 }
 
 @keyframes fadeIn{
@@ -29,39 +93,26 @@
     }
 }
 
-.heading-tertiary-project{
-    font-size: 4.8rem;
-    color: #e93131;
-    text-align: center;
+@keyframes fadeInFromTop{
+    from{
+        opacity: 0;
+        transform: translate(0, -30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
-.description-project{
-    font-size: 2rem;
-    line-height: 2;
-    color: #eee;
-    text-align: center;
-}
-
-.img-project-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-project{
-    height: 65vh;
-    width: 55vw;
-    border-radius: 10px;
-    border: 2mm ridge #e93131;
-}
-
-.img-project-right{
-    animation: fadeInFromRight 2s;
-}
-
-.img-project-left{
-    animation: fadeInFromLeft 2s;
+@keyframes fadeInFromBottom{
+    from{
+        opacity: 0;
+        transform: translate(0, 30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 @keyframes fadeInFromRight{
@@ -86,198 +137,141 @@
     }
 }
 
-.btn--project{
-    color: #fff;
-    border-radius: 30px;
-    display: inline-block;
-    padding: 2rem 3.2rem;
-    transition: all 0.5s;
-    font-size: 2rem;
-    font-weight: 600;
-    cursor: pointer;
-    z-index: 9999;
-    animation: fadeFromBottom 1.2s;
-}
-
-.note{
-    font-size: 2rem;
-    color: green;
-    width: 30vw;
-}
-
 /***********************************************************************************/
 /* ------------------ MEDIA QUERIES ---------------------------------------------- */
 /***********************************************************************************/
 
 /******************************/
-/* ----- Smaller Than 1200px ---- */
+/* ----- Smaller Than 1270px ---- */
 /******************************/
 
-.project-container{
-    height: fit-content;
-}
-
-@media(max-width:75em){
-    .heading-tertiary-project{
-        font-size: 4rem;
+@media(max-width:79.35em){
+    .title{
+        font-size: 2.8rem;
     }
-
-    .description-project{
+    
+    .description{
         font-size: 1.6rem;
-        line-height: 1.6;
     }
-
-    .img-project{
-        height: 45vh;
-        width: 55vw;
-    }
-
-    .btn--project{
-        padding: 1.8rem 2.2rem;
-        font-size: 1.3rem;
-    }
-
-    .note{
-        font-size: 1.8rem;
-        width: 25vw;
+    
+    .description-alt{
+        font-size: 1.6rem;
     }
 }
 
 /******************************/
-/* ----- Smaller Than 936px ---- */
+/* ----- Smaller Than 1100px ---- */
 /******************************/
 
-@media(max-width:58.5em){
-    .grid--center-v{
-        display: flex;
-        flex-direction: column;
+@media(max-width:68.75em){
+    .project-section{
+        margin: 0 10vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
         gap: 5vh;
     }
 
-    .switch-box .project-img-box{
-        order: 2;
+    .img-project{
+        height: 50vh;
+        width: 40vw;
     }
 
-    .switch-box .text-project-box{
-        order: 1;
+    .project-box-info{
+        height: 15vh;
+        width: 40vw;
     }
 
-    .heading-tertiary-project{
-        font-size: 3.6rem;
-        margin-bottom: 1.2rem;
-    }
+}
 
-    .description-project{
-        font-size: 2.4rem;
-        line-height: 1;
+/******************************/
+/* ----- Smaller Than 668px ---- */
+/******************************/
+
+@media(max-width:43em){
+    .project-section{
+        margin: 0 15vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        gap: 10vh;
     }
 
     .img-project{
-        height: 30vh;
+        height: 40vh;
         width: 70vw;
     }
 
-    .btn--project{
-        padding: 1.6rem 1.8rem;
-        font-size: 1.4rem;
+    .project-box-info{
+        height: 10vh;
+        width: 70vw;
     }
 
-    .note{
-        font-size: 1rem;
-        width: 50vw;
+}
+
+/******************************/
+/* ----- Smaller Than 430px ---- */
+/******************************/
+
+@media(max-width:26.875em){
+
+    .project-container{
+        padding-top: 10vh;
+        padding-bottom: 15vh;
+    }
+
+    .project-section{
+        margin: 0 12vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+        gap: 5vh;
+    }
+
+    .img-project{
+        height: 35vh;
+        width: 75vw;
+    }
+
+    .project-box-info{
+        height: 10vh;
+        width: 75vw;
+    }
+
+}
+
+/******************************/
+/* ----- Smaller Than 410px ---- */
+/******************************/
+
+@media(max-width:25.625em){
+    .title{
+        font-size: 2.3rem;
+    }
+    
+    .description{
+        font-size: 1.3rem;
+    }
+    
+    .description-alt{
+        font-size: 1.3rem;
     }
 }
 
 /******************************/
-/* ----- Smaller Than 700px ---- */
+/* ----- Smaller Than 280px ---- */
 /******************************/
 
-@media(max-width:44em){
-    .heading-tertiary-project{
-        font-size: 3.6rem;
-        margin-bottom: 1.2rem;
+@media(max-width:17.5em){
+    .title{
+        font-size: 1.8rem;
     }
-
-    .description-project{
-        font-size: 2.4rem;
-        line-height: 1;
-    }
-
-    .img-project{
-        height: 30vh;
-        width: 70vw;
-    }
-
-    .btn--project{
-        padding: 1.6rem 1.8rem;
-        font-size: 1.4rem;
-    }
-
-    .note{
+    
+    .description{
         font-size: 1rem;
-        width: 50vw;
+    }
+    
+    .description-alt{
+        font-size: 1rem;
     }
 }
-
-/******************************/
-/* ----- Smaller Than 655px ---- */
-/******************************/
-
-@media(max-width:40.93em){
-    .heading-tertiary-project{
-        font-size: 2.8rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .description-project{
-        font-size: 1.6rem;
-        line-height: 1;
-    }
-
-    .img-project{
-        height: 30vh;
-        width: 70vw;
-    }
-
-    .btn--project{
-        padding: 1.4rem 1.6rem;
-        font-size: 1.4rem;
-    }
-
-    .note{
-        font-size: 1rem;
-        width: 50vw;
-    }
-}
-
-/******************************/
-/* ----- Smaller Than 500px ---- */
-/******************************/
-
-@media(max-width:31.25em){
-    .heading-tertiary-project{
-        font-size: 2.8rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .description-project{
-        font-size: 1.6rem;
-        line-height: 1;
-    }
-
-    .img-project{
-        height: 20vh;
-        width: 70vw;
-    }
-
-    .btn--project{
-        padding: 1.4rem 1.6rem;
-        font-size: 1.4rem;
-    }
-
-    .note{
-        font-size: 1rem;
-        width: 50vw;
-    }
-}
-

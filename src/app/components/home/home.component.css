@@ -241,3 +241,23 @@
         transform: translate(10%, -50%);
     }
 }
+
+/******************************/
+/* ----- Smaller Than 252px ---- */
+/******************************/
+
+@media(max-width:15.75em){
+    .heading-primary--hero{
+        font-size: 3.2rem;
+    }
+}
+
+/******************************/
+/* ----- Smaller Than 228px ---- */
+/******************************/
+
+@media(max-width:14.2em){
+    .heading-primary--hero{
+        font-size: 2.6rem;
+    }
+}

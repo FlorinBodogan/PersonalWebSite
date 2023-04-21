@@ -27,6 +27,7 @@ export class HeaderComponent {
       this.menuClass = ""; 
     }
   }
+  
   public selectPage(): void {
     this.isMenuOpen = false;
     this.menuClass = "";

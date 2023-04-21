@@ -235,9 +235,6 @@
 /******************************/
 
 @media(max-width:75em){
-    .aboutme{
-        height: fit-content;
-    } 
 
     .first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
         gap: 5vw;
@@ -249,9 +246,6 @@
 /******************************/
 
 @media(max-width:63em){
-    .aboutme{
-        height: fit-content;
-    } 
 
     .skills-section{
         width: 35vw;
@@ -267,9 +261,6 @@
 /******************************/
 
 @media(max-width:43em){
-    .aboutme{
-        height: fit-content;
-    } 
 
     .skills-section{
         width: 25vw;
@@ -285,26 +276,39 @@
 /******************************/
 
 @media(max-width: 34em){
-    .aboutme{
-        height: fit-content;
-    } 
 
     .description-text{
         width: 75vw;
     }
 
-    .skills-section{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        font-size: 2.4rem;
-        gap: 3vh;
-        place-items: center;
-        justify-content: center;
+    .img-skill{
+        height: 50%;
+        width: 50%;
     }
 
-    .first-colon, .second-colon, .third-colon, .fourth-colon, .fifth-colon{
-        display: flex;
-        flex-direction: column;
+    .card {
+        width: 100px;
+        height: 60px;
+    }
+}
+
+/******************************/
+/* --------- Smaller Phones --------- */
+/******************************/
+
+@media(max-width: 21.85em){
+
+    .description-text{
+        width: 75vw;
+    }
+
+    .img-skill{
+        height: 35%;
+        width: 35%;
+    }
+
+    .card {
+        width: 80px;
+        height: 60px;
     }
 }
